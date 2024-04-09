@@ -1,0 +1,390 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    justify-self: start;
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: #666;
+}
+
+nav ul li a:hover {
+    background-color: #888;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery {
+    grid-column: 1 / span 3;
+}
+.feature {
+    grid-column: 4 / span 6;
+}
+
+.news {
+    grid-column: 10 / span 3;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.feature,
+.gallery,
+.news {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+}
+
+.feature h2,
+.gallery h2,
+.news h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/*form*/
+.form form {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr;
+    gap: 10px;
+}
+
+.form label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*news*/
+.news-item {
+    display: grid;
+    grid-template-columns:auto;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-content h3 {
+    margin: 0;
+}
+
+.news-content p {
+    margin: 0 0 10px 0;
+}
+
+.news-content .btn {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.news-content .btn:hover {
+    background-color: #555;
+}
+
+/*текст стиль*/
+.text-400 {
+    font-weight: 400;/* Regular */
+    font-size: 16px;
+}
+.text-400.large {
+    font-size: 20px;
+}
+.text-400.medium {
+    font-size: 18px;
+}
+
+.text-500 {
+    font-weight: 500;/* Medium */
+    font-family: 18px;
+}
+
+.text-600 {
+    font-weight: 600;/* Semibold */
+    font-size: 17px;
+}
+.text-600.large {
+    font-size: 18px;
+}
+.text-600.small {
+    font-size: 14px;
+}
+.text-600.medium {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.text-700 {
+    font-weight: 700;/* Bold */
+    font-size: 60px;
+}
+.text-700.large {
+    font-size: 24px;
+}
+.text-700.medium {
+    font-size: 35px;
+}
+p{
+    font-weight: 500;/* Regular */
+    font-size: 16px;
+}
+.feature ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Для екранів шириною до 576px */
+@media (max-width: 576px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .feature,
+    .form {
+        flex: 0 0 60%;
+    }
+
+    .news {
+        flex: 0 0 40%;
+    }
+
+    .gallery {
+        flex: 0 0 100%;
+    }
+}
+
+/* Для екранів шириною до 768px */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .feature,
+    .form {
+        flex: 0 0 60%;
+    }
+
+    .news {
+        flex: 0 0 40%;
+    }
+
+    .gallery {
+        flex: 0 0 100%;
+    }
+}
+
+/* Для екранів шириною від 769px до 991px */
+@media (min-width: 769px) and (max-width: 991px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .feature {
+        flex: 0 0 60%;
+    }
+
+    .news {
+        flex: 0 0 40%;
+    }
+
+    .gallery {
+        flex: 0 0 100%;
+    }
+}
+
+/* Для екранів шириною від 992px до 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .feature {
+        flex: 0 0 58%;
+    }
+
+    .news {
+        flex: 0 0 42%;
+    }
+
+    .form {
+        flex: 0 0 100%;
+    }
+}
